@@ -1,0 +1,1759 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="صفحة علم النفس التعليمي للفرقة الرابعة: خريطة ذهنية تفاعلية، جداول قياس وتقويم، قوانين إحصاء بأمثلة، وملف PDF للمراجعة السريعة."
+    />
+    <meta
+      name="keywords"
+      content="علم النفس التعليمي, كلية التربية, الفرقة الرابعة, الفروق الفردية, القياس والتقويم, الاختبارات النفسية, الاختبارات التحصيلية, خريطة ذهنية"
+    />
+    <meta name="author" content="Omar Sha'ban" />
+    <meta name="theme-color" content="#101828" />
+    <meta property="og:title" content="علم النفس التعليمي | Edu-tech" />
+    <meta
+      property="og:description"
+      content="ذاكر علم النفس التعليمي بخريطة ذهنية تفاعلية وبطاقات تسهل الحفظ."
+    />
+    <meta property="og:image" content="../Data/logo-small.webp" />
+    <meta property="og:type" content="article" />
+    <title>علم النفس التعليمي | الملخص المفيد</title>
+    <link rel="icon" href="../Data/edutech-icon-32.png" type="image/png" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="psych-page">
+    <header
+      class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6"
+      >
+        <a
+          href="../index.html"
+          class="flex items-center gap-3"
+          aria-label="العودة للرئيسية"
+        >
+          <img
+            src="../Data/logo-small.webp"
+            alt="Edu-tech"
+            class="h-12 w-auto"
+          />
+        </a>
+        <nav
+          class="hidden items-center gap-2 text-sm font-bold text-slate-700 md:flex"
+        >
+          <a class="rounded-full px-3 py-2 hover:bg-slate-100" href="#mindmap"
+            >الخريطة</a
+          >
+          <a class="rounded-full px-3 py-2 hover:bg-slate-100" href="#chapters"
+            >الفصول</a
+          >
+          <a
+            class="rounded-full px-3 py-2 hover:bg-slate-100"
+            href="#statistics"
+            >الإحصاء</a
+          >
+          <a class="rounded-full px-3 py-2 hover:bg-slate-100" href="#tables"
+            >الجداول</a
+          >
+          <a
+            class="rounded-full px-3 py-2 hover:bg-slate-100"
+            href="#flashcards"
+            >بطاقات الحفظ</a
+          >
+          <a class="rounded-full px-3 py-2 hover:bg-slate-100" href="#resources"
+            >الملفات</a
+          >
+          <a
+            href="4th.html"
+            class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-3 font-black text-slate-950 hover:bg-slate-50"
+          >
+            <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            مواد الفرقة الرابعة
+          </a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a
+            href="../Data/علم نفس.pdf"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-sm font-bold text-white hover:bg-slate-800"
+          >
+            <i data-lucide="file-text" class="h-4 w-4"></i>
+            PDF
+          </a>
+          <button
+            id="psychMenuToggle"
+            class="psych-menu-toggle md:hidden"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-controls="psychMobileNav"
+            aria-expanded="false"
+          >
+            <span class="psych-menu-lines" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <nav id="psychMobileNav" class="psych-mobile-nav" hidden>
+        <a href="#mindmap">الخريطة</a>
+        <a href="#chapters">الفصول</a>
+        <a href="#statistics">الإحصاء</a>
+        <a href="#tables">الجداول</a>
+        <a href="#flashcards">بطاقات الحفظ</a>
+        <a href="#resources">الملفات</a>
+        <a
+          href="4th.html"
+          class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-3 font-black text-slate-950 hover:bg-slate-50"
+        >
+          <i data-lucide="arrow-right" class="h-5 w-5"></i>
+          مواد الفرقة الرابعة
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="relative isolate overflow-hidden bg-slate-950 text-white">
+        <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+        <div
+          class="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,.96),rgba(15,23,42,.78),rgba(15,23,42,.94))]"
+        ></div>
+        <div
+          class="relative mx-auto flex min-h-[78vh] max-w-7xl items-center px-4 py-16 sm:px-6"
+        >
+          <div class="max-w-4xl">
+            <h1 class="max-w-3xl text-4xl font-black leading-tight sm:text-6xl">
+              علم النفس التعليمي في خريطة واحدة تحفظها بعينك
+            </h1>
+            <p class="mt-6 max-w-3xl text-lg leading-9 text-slate-200">
+              تجربة مراجعة مبنية على مسار واضح: تفهم الفكرة، تربطها بالخريطة،
+              تطبق القانون، ثم تختبر نفسك ببطاقات سريعة.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#mindmap"
+                class="inline-flex items-center gap-2 rounded-full bg-amber-300 px-5 py-3 font-black text-slate-950 hover:bg-amber-200"
+              >
+                <i data-lucide="network" class="h-5 w-5"></i>
+                افتح الخريطة الذهنية
+              </a>
+              <a
+                href="#chapters"
+                class="inline-flex items-center gap-2 rounded-full border border-white/35 px-5 py-3 font-black text-white hover:bg-white/10"
+              >
+                <i data-lucide="book-open-check" class="h-5 w-5"></i>
+                راجع الفصول
+              </a>
+              <a
+                href="#statistics"
+                class="inline-flex items-center gap-2 rounded-full border border-amber-300/45 px-5 py-3 font-black text-amber-200 hover:bg-white/10"
+              >
+                <i data-lucide="calculator" class="h-5 w-5"></i>
+                قوانين الإحصاء
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mindmap" class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+        <div
+          class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end"
+        >
+          <div>
+            <p class="text-sm font-black text-amber-700">خريطة فهم تفاعلية</p>
+            <h2 class="mt-2 text-3xl font-black text-slate-950 sm:text-4xl">
+              الخريطة الذهنية التفاعلية
+            </h2>
+            <p class="mt-3 max-w-2xl leading-8 text-slate-700">
+              الخريطة هنا ليست شكلًا فقط؛ كل عقدة مدخل سريع لفكرة، وتساعدك تراجع
+              المنهج كعلاقات: مفهوم، وظيفة، قانون، تطبيق.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button
+              class="map-filter rounded-full bg-slate-950 px-4 py-2 text-sm font-bold text-white"
+              data-target="all"
+            >
+              الكل
+            </button>
+            <button
+              class="map-filter rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm"
+              data-target="measurement"
+            >
+              القياس
+            </button>
+            <button
+              class="map-filter rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm"
+              data-target="tests"
+            >
+              الاختبارات
+            </button>
+            <button
+              class="map-filter rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm"
+              data-target="stats"
+            >
+              الإحصاء
+            </button>
+          </div>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-[1.35fr_.65fr]">
+          <div class="glass overflow-hidden rounded-[2rem] p-3 sm:p-6">
+            <svg
+              id="mindSvg"
+              viewBox="0 0 1100 720"
+              role="img"
+              aria-label="خريطة ذهنية لمادة علم النفس التعليمي"
+              class="h-auto w-full"
+            >
+              <defs>
+                <linearGradient id="coreGradient" x1="0" x2="1" y1="0" y2="1">
+                  <stop stop-color="#111827" />
+                  <stop offset="1" stop-color="#5b4636" />
+                </linearGradient>
+                <filter
+                  id="softShadow"
+                  x="-20%"
+                  y="-20%"
+                  width="140%"
+                  height="140%"
+                >
+                  <feDropShadow
+                    dx="0"
+                    dy="12"
+                    stdDeviation="12"
+                    flood-color="#0f172a"
+                    flood-opacity=".18"
+                  />
+                </filter>
+              </defs>
+              <g
+                stroke="#cbd5e1"
+                stroke-width="5"
+                stroke-linecap="round"
+                opacity=".9"
+              >
+                <path d="M548 356 C420 220 285 168 160 138" />
+                <path d="M548 356 C715 198 860 156 1010 146" />
+                <path d="M548 356 C372 384 255 480 145 605" />
+                <path d="M548 356 C706 398 842 485 980 602" />
+                <path d="M548 356 C545 465 548 555 548 650" />
+              </g>
+              <g
+                class="mind-node"
+                tabindex="0"
+                data-group="all"
+                data-title="علم النفس التعليمي"
+                data-note="المحور المركزي: فهم الفروق الفردية والقياس والتقويم والاختبارات والتحصيل."
+              >
+                <circle
+                  cx="548"
+                  cy="356"
+                  r="104"
+                  fill="url(#coreGradient)"
+                  filter="url(#softShadow)"
+                />
+                <text
+                  x="548"
+                  y="340"
+                  text-anchor="middle"
+                  fill="#fff"
+                  font-size="34"
+                  font-weight="900"
+                >
+                  علم النفس
+                </text>
+                <text
+                  x="548"
+                  y="386"
+                  text-anchor="middle"
+                  fill="#fde68a"
+                  font-size="28"
+                  font-weight="900"
+                >
+                  التعليمي
+                </text>
+              </g>
+              <g
+                class="mind-node"
+                tabindex="0"
+                data-group="all"
+                data-title="الفروق الفردية"
+                data-note="تعريفها، أنواعها، مظاهرها، خصائصها، مجالاتها، والعوامل المؤثرة فيها."
+              >
+                <rect
+                  x="30"
+                  y="76"
+                  width="260"
+                  height="126"
+                  rx="28"
+                  fill="#fff7ed"
+                  stroke="#fb923c"
+                  stroke-width="3"
+                  filter="url(#softShadow)"
+                />
+                <text
+                  x="160"
+                  y="130"
+                  text-anchor="middle"
+                  fill="#9a3412"
+                  font-size="28"
+                  font-weight="900"
+                >
+                  الفروق الفردية
+                </text>
+                <text
+                  x="160"
+                  y="168"
+                  text-anchor="middle"
+                  fill="#7c2d12"
+                  font-size="18"
+                >
+                  نوع | درجة | مظاهر
+                </text>
+              </g>
+              <g
+                class="mind-node"
+                tabindex="0"
+                data-group="measurement"
+                data-title="القياس والتقويم"
+                data-note="القياس وصف كمي، والتقويم حكم واتخاذ قرار لتحسين التعلم."
+              >
+                <rect
+                  x="785"
+                  y="80"
+                  width="288"
+                  height="134"
+                  rx="30"
+                  fill="#fff8e1"
+                  stroke="#d4af37"
+                  stroke-width="3"
+                  filter="url(#softShadow)"
+                />
+                <text
+                  x="929"
+                  y="138"
+                  text-anchor="middle"
+                  fill="#5b4636"
+                  font-size="28"
+                  font-weight="900"
+                >
+                  القياس والتقويم
+                </text>
+                <text
+                  x="929"
+                  y="176"
+                  text-anchor="middle"
+                  fill="#6f5b2a"
+                  font-size="18"
+                >
+                  مستويات | طرق | أهداف
+                </text>
+              </g>
+              <g
+                class="mind-node"
+                tabindex="0"
+                data-group="stats"
+                data-title="الذكاء والإحصاء"
+                data-note="أنواع الذكاء ونسبه، ثم مقاييس النزعة المركزية والانحراف المعياري."
+              >
+                <rect
+                  x="22"
+                  y="538"
+                  width="270"
+                  height="130"
+                  rx="28"
+                  fill="#f8f7f3"
+                  stroke="#b8860b"
+                  stroke-width="3"
+                  filter="url(#softShadow)"
+                />
+                <text
+                  x="157"
+                  y="594"
+                  text-anchor="middle"
+                  fill="#5b4636"
+                  font-size="27"
+                  font-weight="900"
+                >
+                  الذكاء والإحصاء
+                </text>
+                <text
+                  x="157"
+                  y="632"
+                  text-anchor="middle"
+                  fill="#6f5b2a"
+                  font-size="18"
+                >
+                  نسب | متوسط | وسيط
+                </text>
+              </g>
+              <g
+                class="mind-node"
+                tabindex="0"
+                data-group="tests"
+                data-title="الاختبارات النفسية"
+                data-note="التعريف، الأهداف، خصائص الاختبار الجيد، الصدق، الثبات، والموضوعية."
+              >
+                <rect
+                  x="812"
+                  y="535"
+                  width="260"
+                  height="132"
+                  rx="28"
+                  fill="#f5f5f4"
+                  stroke="#78716c"
+                  stroke-width="3"
+                  filter="url(#softShadow)"
+                />
+                <text
+                  x="942"
+                  y="592"
+                  text-anchor="middle"
+                  fill="#292524"
+                  font-size="27"
+                  font-weight="900"
+                >
+                  الاختبارات النفسية
+                </text>
+                <text
+                  x="942"
+                  y="630"
+                  text-anchor="middle"
+                  fill="#57534e"
+                  font-size="18"
+                >
+                  صدق | ثبات | شمول
+                </text>
+              </g>
+              <g
+                class="mind-node"
+                tabindex="0"
+                data-group="tests"
+                data-title="الاختبارات التحصيلية"
+                data-note="تقيس ناتج التعلم: موضوعية ومقالية، مع تعليمات وتصحيح ومعايير."
+              >
+                <rect
+                  x="408"
+                  y="612"
+                  width="280"
+                  height="88"
+                  rx="24"
+                  fill="#fffbeb"
+                  stroke="#d4af37"
+                  stroke-width="3"
+                  filter="url(#softShadow)"
+                />
+                <text
+                  x="548"
+                  y="665"
+                  text-anchor="middle"
+                  fill="#5b4636"
+                  font-size="26"
+                  font-weight="900"
+                >
+                  الاختبارات التحصيلية
+                </text>
+              </g>
+            </svg>
+          </div>
+          <aside class="ink-panel rounded-[2rem] p-6 shadow-xl">
+            <p class="text-sm font-black text-amber-200">اضغط على أي عقدة</p>
+            <h3 id="mapTitle" class="mt-3 text-2xl font-black">
+              علم النفس التعليمي
+            </h3>
+            <p id="mapNote" class="mt-4 leading-9 text-slate-200">
+              الخريطة تجمع ملخصك في محاور رئيسية. كل عقدة تفتح فكرة، وبعدها
+              تراجع التفصيل في تبويب الفصول.
+            </p>
+            <div class="premium-focus-box">
+              <p>طريقة الاستخدام</p>
+              <strong>
+                اضغط عقدة، اقرأ الملاحظة، ثم افتح تبويب الفصل المرتبط واختبر
+                نفسك.
+              </strong>
+            </div>
+            <div class="mt-6 grid gap-3">
+              <a
+                href="#chapters"
+                class="rounded-2xl bg-white/10 px-4 py-3 font-bold text-white hover:bg-white/15"
+                >افتح شرح الفصل</a
+              >
+              <a
+                href="#flashcards"
+                class="rounded-2xl bg-amber-300 px-4 py-3 font-black text-slate-950 hover:bg-amber-200"
+                >اختبر نفسك</a
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="chapters" class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+        <div class="mb-8 grid gap-5 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+          <div>
+            <p class="text-sm font-black text-amber-700">Mind Map Content</p>
+            <h2 class="mt-2 text-3xl font-black text-slate-950 sm:text-4xl">
+              الفصول
+            </h2>
+          </div>
+          <label class="glass flex items-center gap-3 rounded-2xl px-4 py-3">
+            <i data-lucide="search" class="h-5 w-5 text-slate-500"></i>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="ابحث داخل الملخص..."
+              class="w-full bg-transparent text-base outline-none"
+            />
+          </label>
+        </div>
+        <div
+          id="chapterTabs"
+          class="mb-6 flex gap-2 overflow-x-auto pb-2"
+          role="tablist"
+          aria-label="فصول علم النفس"
+        ></div>
+        <div id="chapterContent" class="grid gap-5"></div>
+      </section>
+
+      <section id="statistics" class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+        <div
+          class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end"
+        >
+          <div>
+            <p class="text-sm font-black text-amber-700">وحدة المسائل</p>
+            <h2 class="mt-2 text-3xl font-black text-slate-950 sm:text-4xl">
+              قوانين الإحصاء مع أمثلة محلولة
+            </h2>
+            <p class="mt-3 max-w-3xl leading-8 text-slate-700">
+              هنا هنفهم الأربع أفكار الأساسية كأنها لعبة أرقام: نطلع رقم يمثل
+              المجموعة، أو نعرف الرقم المتكرر، أو نقيس الفرق بين الكبير والصغير.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl bg-slate-950 px-5 py-4 text-sm font-bold leading-7 text-amber-100"
+          >
+            للحفظ: لو السؤال فيه درجات كثيرة، ابدأ بالترتيب. الترتيب نصف الحل.
+          </div>
+        </div>
+        <div id="statsGrid" class="grid gap-5"></div>
+      </section>
+
+      <section id="tables" class="bg-[#1a1a1a] px-4 py-16 text-white sm:px-6">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-8">
+            <p class="text-sm font-black text-amber-300">جداول ومقارنات</p>
+          </div>
+
+          <div class="desktop-tables">
+            <article class="premium-table-card">
+              <h3>الفرق بين القياس والتقويم</h3>
+              <table class="premium-table">
+                <thead>
+                  <tr>
+                    <th>وجه المقارنة</th>
+                    <th>القياس</th>
+                    <th>التقويم</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>الفكرة</td>
+                    <td>يصف السلوك كميا بالأرقام.</td>
+                    <td>يحكم على قيمة السلوك ويقترح تحسينًا.</td>
+                  </tr>
+                  <tr>
+                    <td>الأداة</td>
+                    <td>يعتمد على اختبارات ومقاييس.</td>
+                    <td>يعتمد على القياس والملاحظة والحكم والعلاج.</td>
+                  </tr>
+                  <tr>
+                    <td>مثال</td>
+                    <td>طالب حصل على 8 من 10.</td>
+                    <td>الطالب جيد، لكنه يحتاج تدريبًا على سؤال المقال.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="premium-table-card">
+              <h3>الفرق بين الاختبار والتقويم</h3>
+              <table class="premium-table">
+                <thead>
+                  <tr>
+                    <th>وجه المقارنة</th>
+                    <th>الاختبار</th>
+                    <th>التقويم</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>الدور</td>
+                    <td>أداة تقيس جانبًا محددًا.</td>
+                    <td>عملية شاملة تفهم النتيجة وتطورها.</td>
+                  </tr>
+                  <tr>
+                    <td>من يقوم به؟</td>
+                    <td>غالبًا المعلم يضعه ويصححه.</td>
+                    <td>يشترك فيه كل من له علاقة بالعملية التعليمية.</td>
+                  </tr>
+                  <tr>
+                    <td>النتيجة</td>
+                    <td>يعطينا درجة.</td>
+                    <td>يعطينا حكمًا وخطة علاج أو تحسين.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="premium-table-card">
+              <h3>مستويات القياس الأربعة</h3>
+              <table class="premium-table">
+                <thead>
+                  <tr>
+                    <th>المستوى</th>
+                    <th>معناه ببساطة</th>
+                    <th>مثال</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>الإسمي</td>
+                    <td>رقم كاسم فقط، لا نرتبه ولا نحسب عليه.</td>
+                    <td>النوع، التخصص.</td>
+                  </tr>
+                  <tr>
+                    <td>الرتبي</td>
+                    <td>يرتب القيم، لكن المسافات بين الرتب غير متساوية.</td>
+                    <td>الأول، الثاني، تقدير جيد.</td>
+                  </tr>
+                  <tr>
+                    <td>الفئوي</td>
+                    <td>درجات بينها مسافات متساوية وصفر اعتباري.</td>
+                    <td>درجات الاختبار.</td>
+                  </tr>
+                  <tr>
+                    <td>النسبي</td>
+                    <td>قياس له صفر حقيقي ونقدر نقارن بالنسب.</td>
+                    <td>الطول، الوزن، الزمن.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="premium-table-card">
+              <h3>جدول المواصفات</h3>
+              <table class="premium-table">
+                <thead>
+                  <tr>
+                    <th>العنصر</th>
+                    <th>وظيفته</th>
+                    <th>مثال سريع</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>المحتوى</td>
+                    <td>يحدد الفصول التي سيدخل منها الامتحان.</td>
+                    <td>الفصل الأول، الثاني، الثالث.</td>
+                  </tr>
+                  <tr>
+                    <td>الأهداف</td>
+                    <td>يحدد نوع التفكير المطلوب.</td>
+                    <td>تذكر، فهم، تطبيق.</td>
+                  </tr>
+                  <tr>
+                    <td>الوزن</td>
+                    <td>يوزع الأسئلة بعدل حسب أهمية الفصل.</td>
+                    <td>فصل مهم يأخذ أسئلة أكثر.</td>
+                  </tr>
+                  <tr>
+                    <td>النتيجة</td>
+                    <td>امتحان متوازن لا يظلم جزءًا من المنهج.</td>
+                    <td>أسئلة موزعة بوضوح.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+
+          <div class="mobile-div-tables">
+            <article class="mobile-div-table">
+              <div class="mobile-div-table-head">
+                <span>01</span>
+                <div>
+                  <h3>القياس والتقويم</h3>
+                  <p>القياس يطلع رقم. التقويم يستخدم الرقم عشان يحكم ويصلح.</p>
+                </div>
+              </div>
+              <div class="mobile-div-row mobile-div-row-labels">
+                <div>القياس</div>
+                <div>التقويم</div>
+              </div>
+              <div class="mobile-div-row">
+                <div class="mobile-div-cell">
+                  <b>الفكرة</b>
+                  <p>يصف السلوك كميا، يعني يحول الأداء إلى درجة أو رقم.</p>
+                </div>
+                <div class="mobile-div-cell">
+                  <b>الفكرة</b>
+                  <p>ينظر للدرجة، ثم يقرر: ممتاز؟ يحتاج علاج؟ يحتاج تدريب؟</p>
+                </div>
+              </div>
+              <div class="mobile-div-row">
+                <div class="mobile-div-cell">
+                  <b>الأداة</b>
+                  <p>اختبارات ومقاييس تعطي بيانات رقمية.</p>
+                </div>
+                <div class="mobile-div-cell">
+                  <b>الأداة</b>
+                  <p>قياس وملاحظة وحكم وخطة تحسين.</p>
+                </div>
+              </div>
+              <div class="mobile-div-row">
+                <div class="mobile-div-cell mobile-div-example">
+                  <b>مثال</b>
+                  <p>طالب حصل على 8 من 10.</p>
+                </div>
+                <div class="mobile-div-cell mobile-div-example">
+                  <b>مثال</b>
+                  <p>الطالب جيد، لكنه يحتاج تدريبًا على سؤال المقال.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="mobile-div-table">
+              <div class="mobile-div-table-head">
+                <span>02</span>
+                <div>
+                  <h3>الاختبار والتقويم</h3>
+                  <p>
+                    الاختبار أداة صغيرة. التقويم رحلة كاملة تبدأ بالدرجة وتنتهي
+                    بتحسين.
+                  </p>
+                </div>
+              </div>
+              <div class="mobile-div-row mobile-div-row-labels">
+                <div>الاختبار</div>
+                <div>التقويم</div>
+              </div>
+              <div class="mobile-div-row">
+                <div class="mobile-div-cell">
+                  <b>الدور</b>
+                  <p>يقيس جانبًا محددًا من السلوك أو التحصيل.</p>
+                </div>
+                <div class="mobile-div-cell">
+                  <b>الدور</b>
+                  <p>يفهم النتيجة، ويحدد سبب الضعف، ويقترح العلاج.</p>
+                </div>
+              </div>
+              <div class="mobile-div-row">
+                <div class="mobile-div-cell">
+                  <b>من يقوم به؟</b>
+                  <p>غالبًا المعلم يضعه، يطبقه، ثم يصححه.</p>
+                </div>
+                <div class="mobile-div-cell">
+                  <b>من يقوم به؟</b>
+                  <p>عملية تعاونية يشترك فيها كل من له علاقة بالتعلم.</p>
+                </div>
+              </div>
+              <div class="mobile-div-row">
+                <div class="mobile-div-cell mobile-div-example">
+                  <b>النتيجة</b>
+                  <p>يعطينا درجة.</p>
+                </div>
+                <div class="mobile-div-cell mobile-div-example">
+                  <b>النتيجة</b>
+                  <p>يعطينا حكمًا وخطة علاج أو تحسين.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="mobile-div-table">
+              <div class="mobile-div-table-head">
+                <span>03</span>
+                <div>
+                  <h3>مستويات القياس الأربعة</h3>
+                  <p>
+                    كل مستوى يقول لنا: هل الرقم مجرد اسم، أم ترتيب، أم درجة، أم
+                    قياس حقيقي؟
+                  </p>
+                </div>
+              </div>
+              <div
+                class="mobile-div-row mobile-div-row-labels mobile-level-row"
+              >
+                <div>المستوى</div>
+                <div>معناه ببساطة</div>
+                <div>مثال</div>
+              </div>
+              <div class="mobile-div-row mobile-level-row">
+                <div class="mobile-div-cell"><b>الإسمي</b></div>
+                <div class="mobile-div-cell">
+                  <p>رقم كاسم فقط، لا نرتبه ولا نحسب عليه.</p>
+                </div>
+                <div class="mobile-div-cell mobile-div-example">
+                  <p>النوع، التخصص.</p>
+                </div>
+              </div>
+              <div class="mobile-div-row mobile-level-row">
+                <div class="mobile-div-cell"><b>الرتبي</b></div>
+                <div class="mobile-div-cell">
+                  <p>يرتب القيم، لكن المسافات بين الرتب غير متساوية.</p>
+                </div>
+                <div class="mobile-div-cell mobile-div-example">
+                  <p>الأول، الثاني، جيد.</p>
+                </div>
+              </div>
+              <div class="mobile-div-row mobile-level-row">
+                <div class="mobile-div-cell"><b>الفئوي</b></div>
+                <div class="mobile-div-cell">
+                  <p>درجات بينها مسافات متساوية، لكن الصفر فيه اعتباري.</p>
+                </div>
+                <div class="mobile-div-cell mobile-div-example">
+                  <p>درجات الاختبار.</p>
+                </div>
+              </div>
+              <div class="mobile-div-row mobile-level-row">
+                <div class="mobile-div-cell"><b>النسبي</b></div>
+                <div class="mobile-div-cell">
+                  <p>قياس له صفر حقيقي، ونقدر نقارن فيه بالنسب.</p>
+                </div>
+                <div class="mobile-div-cell mobile-div-example">
+                  <p>الطول، الوزن، الزمن.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="mobile-div-table">
+              <div class="mobile-div-table-head">
+                <span>04</span>
+                <div>
+                  <h3>جدول المواصفات</h3>
+                  <p>
+                    فكرته بسيطة: نوزع أسئلة الامتحان بعدل بين الفصول ومستويات
+                    التفكير.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="mobile-div-row mobile-div-row-labels mobile-spec-labels"
+              >
+                <div>العنصر</div>
+                <div>وظيفته</div>
+                <div>مثال</div>
+              </div>
+              <div class="mobile-div-row mobile-spec-row">
+                <div class="mobile-div-cell"><b>المحتوى</b></div>
+                <div class="mobile-div-cell">
+                  <p>يحدد الفصول التي سيدخل منها الامتحان.</p>
+                </div>
+                <div class="mobile-div-cell mobile-div-example">
+                  <p>الفصل الأول والثاني والثالث.</p>
+                </div>
+              </div>
+              <div class="mobile-div-row mobile-spec-row">
+                <div class="mobile-div-cell"><b>الأهداف</b></div>
+                <div class="mobile-div-cell">
+                  <p>يحدد نوع التفكير المطلوب من الطالب.</p>
+                </div>
+                <div class="mobile-div-cell mobile-div-example">
+                  <p>تذكر، فهم، تطبيق.</p>
+                </div>
+              </div>
+              <div class="mobile-div-row mobile-spec-row">
+                <div class="mobile-div-cell"><b>الوزن</b></div>
+                <div class="mobile-div-cell">
+                  <p>يوزع الأسئلة حسب أهمية كل فصل.</p>
+                </div>
+                <div class="mobile-div-cell mobile-div-example">
+                  <p>الفصل الأهم يأخذ أسئلة أكثر.</p>
+                </div>
+              </div>
+              <div class="mobile-div-row mobile-spec-row">
+                <div class="mobile-div-cell"><b>النتيجة</b></div>
+                <div class="mobile-div-cell">
+                  <p>يجعل الامتحان متوازنًا وواضحًا.</p>
+                </div>
+                <div class="mobile-div-cell mobile-div-example">
+                  <p>لا يظلم جزءًا من المنهج.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        id="flashcards"
+        class="bg-slate-950 px-4 py-16 text-white sm:px-6"
+      >
+        <div class="mx-auto max-w-7xl">
+          <div
+            class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end"
+          >
+            <div>
+              <p class="text-sm font-black text-amber-200">Memory Tools</p>
+              <h2 class="mt-2 text-3xl font-black sm:text-4xl">
+                بطاقات حفظ واختبار ذاتي
+              </h2>
+            </div>
+            <button
+              id="shuffleCards"
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 font-black text-slate-950 hover:bg-amber-200"
+            >
+              <i data-lucide="shuffle" class="h-5 w-5"></i>
+              ترتيب عشوائي
+            </button>
+          </div>
+          <div
+            id="cardsGrid"
+            class="grid gap-4 md:grid-cols-2 xl:grid-cols-3"
+          ></div>
+        </div>
+      </section>
+
+      <section id="resources" class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+        <div class="grid gap-6">
+          <div class="glass rounded-[2rem] p-6">
+            <p class="text-sm font-black text-amber-700">Resources</p>
+            <h2 class="mt-2 text-3xl font-black">ملفات المادة</h2>
+            <p class="mt-4 leading-9 text-slate-700">
+              هنا نسخة مراجعة مكتوبة ومنظمة، ومعها ملف PDF للمراجعة والطباعة. تم
+              تحويل الجداول والقوانين إلى شرح واضح حتى تراجع بسرعة من غير ما
+              تتوه بين الصفحات.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="../Data/علم نفس.pdf"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 font-black text-white hover:bg-slate-800"
+              >
+                <i data-lucide="download" class="h-5 w-5"></i>
+                فتح ملف علم نفس PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+          >Facebook</a
+        >
+        |
+        <a href="https://wa.me/201064111374" target="_blank" rel="noopener"
+          >WhatsApp</a
+        >
+        |
+        <a
+          href="https://edu-tech-design.netlify.app/"
+          target="_blank"
+          rel="noopener"
+          >Designer</a
+        >
+        |
+        <a
+          href="https://www.linkedin.com/in/omarshabandev"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn</a
+        >
+        |
+        <a href="mailto:mrm597106@gmail.com">Email</a>
+      </div>
+      <p>&copy; 2026 عمر شعبان. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+      const chapters = [
+        {
+          title: "الفصل الأول: الفروق الفردية",
+          accent: "from-orange-500 to-amber-500",
+          sections: [
+            {
+              h: "تعريف",
+              items: [
+                "هو الانحرافات الفردية عن متوسط المجموعة التي ينتمي اليها الفرد في أي صفة مقاسة.",
+              ],
+            },
+            {
+              h: "أنواع",
+              items: [
+                "فروق في النوع: صفة، سمة الذكاء، الجوانب الإنفعالية.",
+                "فروق في الدرجة: ضعيف، مقبول، جيد، جيد جدا، ممتاز.",
+              ],
+            },
+            {
+              h: "مظاهر",
+              items: ["الفروق بين الأفراد.", "الفروق داخل الفرد."],
+            },
+            {
+              h: "خصائص",
+              items: [
+                "توزيع الفروق الفردية: غالبا تنتشر الصفات بين الناس على شكل توزيع اعتدالي؛ معظم الأفراد حول المتوسط وقلة في الأطراف.",
+                "مدى الفروق الفردية: يختلف اتساع الفروق حسب الصفة؛ فالفروق العقلية قد تكون أوسع من بعض الفروق الجسمية أو العكس حسب الموقف.",
+                "معدل ثبات الفروق الفردية: بعض الفروق تبقى مستقرة نسبيا مع الزمن، مثل بعض القدرات، وبعضها يتغير بالتدريب والخبرة.",
+                "نسبة قياس الفروق الفردية: لا نحكم على الفرد من ملاحظة واحدة، بل نحتاج أدوات قياس مناسبة ونقارن الدرجة بمعيار أو جماعة.",
+                "التنظيم الهرمي للفروق الفردية: تبدأ الفروق من قدرات عامة واسعة، ثم قدرات أكثر تخصصا، ثم مهارات وسلوكيات محددة.",
+              ],
+            },
+            {
+              h: "مجالات الفروق الفردية",
+              items: [
+                "الجانب العقلي والمعرفي: يتضمن الذكاء، القدرات العقلية، تحصيل المعلومات.",
+                "الجانب الوجداني: يتعلق بالنواحي المزاجية المكتسبة الخاصة بالعواطف، وهي ما يؤسس على الإنفعال بهدف تزويد الفرد بغايات السلوك ودوافعه.",
+                "الجانب الجسمي: يشمل الفروق في الطول والوزن والصحة العامة وسرعة النمو والقوة الحركية والحواس.",
+              ],
+            },
+            {
+              h: "العوامل التي تؤثر على الفروق الفردية",
+              items: [
+                "العوامل الوراثية: الاستعدادات والخصائص التي تنتقل من الوالدين وتضع حدودًا أولية للنمو العقلي والجسمي والانفعالي.",
+                "العوامل البيئية: الأسرة والمدرسة والثقافة والتغذية والخبرات التعليمية والاقتصاد الاجتماعي، وهي عوامل قد تنمي الاستعداد أو تحد منه.",
+              ],
+            },
+          ],
+        },
+        {
+          title: "الفصل الثاني: مدخل للقياس والتقويم",
+          accent: "from-amber-600 to-stone-700",
+          sections: [
+            {
+              h: "أولاً: القياس النفسي - التعريف",
+              items: [
+                'الأصل للغوي لكلمة قياس: الفعل "قاس" وقاس الشيئ بغيره أي قدره على مثاله؛ وهو رد الشيئ لمثيله.',
+                "تعيين فئة من الأرقام أو الرموز مناظرة لخصائص أو سمات طبقاً لقواعد محدده.",
+                "اعطاء تقدير كمي لشيئ معين عن طريق مقارنته بوحدة معيارية متفق عليها.",
+                "العملية التي يمكن بها وصف شيئاً وصفاً كمياً في ضوء قواعد متفق عليها.",
+                "التعبير الكمي عبارة عن الظاهرة موضوع الدراسة على نحو يمكن باحثين آخرين مدربين من أن يقوموا بقياسها دون وجود فروق جوهرية إذا قيست تحت نفس الظروف.",
+              ],
+            },
+            {
+              h: "الخصائص",
+              items: [
+                "غير مباشر: لأن السمة النفسية لا ترى مباشرة بل يستدل عليها من السلوك أو الأداء.",
+                "يقيس عينه من السلوك (الصفه): فالاختبار لا يغطي كل السلوك بل عينة ممثلة منه.",
+                "نسبي: الدرجة تكتسب معناها بالمقارنة بمعيار أو جماعة أو مستوى أداء.",
+                "يتضمن خطأ: لأن ظروف القياس والأداة والمفحوص قد تضيف قدرا من الخطأ.",
+                "كمي: يحول الصفة أو الأداء إلى أرقام أو رموز قابلة للمقارنة.",
+              ],
+            },
+            {
+              h: "مستويات القياس (ترتيب هرمي)",
+              items: [
+                "المقاييس الإسميه: تصنيف في فئات دون ترتيب مثل النوع أو التخصص.",
+                "مقاييس الرتبة: ترتيب الأفراد أو الأشياء دون معرفة مقدار الفروق الدقيقة بينهم.",
+                "مقاييس المسافة أو الفترة: فواصل متساوية بين الدرجات دون صفر حقيقي.",
+                "مقاييس النسبة: فواصل متساوية وصفر حقيقي يسمح بالمقارنات النسبية.",
+              ],
+            },
+            {
+              h: "طرق القياس",
+              items: [
+                "تكرار حدوث مؤشر السمة: عدد مرات ظهور السلوك في فترة محددة.",
+                "شدة حدوث مؤشر السمة: قوة السلوك أو درجته عند ظهوره.",
+                "مدى حدوث مؤشر السمة: اتساع السلوك وانتشاره عبر مواقف أو زمن مختلف.",
+              ],
+            },
+            {
+              h: "ثانياً: التقويم التربوي - أهداف التقويم",
+              items: [
+                "التشخيص: وضع صورة حقيقية تصف الوضع الحالي للمؤسسات التربوية، وتوضح نواحي القوة والضعف والأسباب التي تؤثر في التعلم؛",
+                "العلاج: وضع حلول مناسبة للتغلب على نواحي الضعف والاستفادة من نواحي القوة.",
+                "المتابعة: متابعة ما يحدث في المؤسسات التربوية والعمل على تدارك الأخطاء وتلاشي نواحي القصور أثناء التنفيذ.",
+                "التوجيه والإرشاد: توجيه سلوك المعلم والمتعلم نحو السلوك المرغوب، وإرشادهم إلى الوسائل المناسبة للتحسين.",
+                "مساعدة المجتمع على معرفة ما حققه من رسالته التربوية وأهدافه العامة والخاصة التي يسعى لتحقيقها.",
+                "الوقوف على معلومات وبيانات تفيد في تعديل المنهج الدراسي وخطط التعليم.",
+                "تحسين المنهج الدراسي: تطوير المحتوى وطرق التدريس والأنشطة في ضوء نتائج التقويم.",
+                "إعداد تقارير عن الطلاب ترسل لأولياء الأمور، فتساعد على تعاون الأسرة مع المدرسة في تربية الطفل.",
+              ],
+            },
+            {
+              h: "أنواع التقويم",
+              items: [
+                "التقويم المبدئي: يتم قبل التعلم لمعرفة مستوى المتعلم واستعداداته.",
+                "التقويم التكويني / البنائي: يتم أثناء التعلم لتقديم تغذية راجعة وتحسين الأداء.",
+                "التقويم التجميعي / النهائي: يتم في نهاية البرنامج أو الوحدة للحكم على مستوى تحقق الأهداف.",
+              ],
+            },
+            {
+              h: "وظائف التقويم",
+              items: [
+                "وظائف تقويمية: تقويم مدخلات المنهج والكشف عن مدى كفايتها؛ تقويم مخرجات التعلم؛ تطوير المناهج وتحديثها؛",
+                "وظائف تنظيمية: الحصول على المعلومات اللازمة لتقسيم المتعلمين وتوجيههم تعليمياً ومهنياً؛ الحصول على البيانات اللازمة عن مدى كفاية الإمكانات المادية والبشرية والإفادة منها على أفضل نحو منهم.",
+                "وسيلة للتشخيص والعلاج والوقاية.",
+                "للمتعلم؛ فيبين له مستواه في النواحي المعرفية والوجدانية والمهارية.",
+                "للمعلم؛ يبين له مدى نجاحه في القيام بالعملية التدريسية.",
+                "للهيئة المسئولة؛ يظهر مدى تحقيق الأهداف ونجاح البرامج ومقدار كفاءة المتعلمين.",
+              ],
+            },
+          ],
+        },
+        {
+          title: "الذكاء والإحصاء التربوي",
+          accent: "from-amber-500 to-yellow-700",
+          sections: [
+            {
+              h: "أنواع الذكاء",
+              items: [
+                "الذكاء المجرد أو المعنوي: القدرة على التعامل مع الرموز والمعاني والأفكار المجردة.",
+                "الذكاء الإجتماعي: القدرة على فهم الآخرين والتعامل معهم بفاعلية.",
+                "الذكاء الميكانيكي: فهم العلاقات الميكانيكية والأدوات والحركة.",
+                "الذكاء الفني: القدرة على التذوق والإنتاج الفني وإدراك العلاقات الجمالية.",
+                "الذكاء الشخصي: فهم الذات وتنظيم الانفعالات والدوافع.",
+                "الذكاء العلمي: القدرة على الملاحظة والتفسير وحل المشكلات بطريقة علمية.",
+                "الذكاء الأكاديمي: القدرة على النجاح في المهام الدراسية والاختبارات المدرسية.",
+                "الذكاء اللفظي: القدرة على فهم اللغة واستخدامها في التعبير والاستدلال.",
+              ],
+            },
+            {
+              h: "نسب الذكاء",
+              items: [
+                "130 فأكثر: تمثل فئة مرتفعي الذكاء جدا، ونسبتهم تقريبا 2% من المجتمع.",
+                "110 - 130: فوق المتوسط، ونسبتهم تقريبا 20%.",
+                "90 - 110: المستوى المتوسط أو العادي، وهو أكبر جزء من المجتمع بنسبة تقارب 45%.",
+                "70 - 90: أقل من المتوسط، ونسبتهم تقريبا 20%.",
+                "50 - 70: ضعف عقلي بسيط أو مستوى منخفض يحتاج دعما تربويا، ونسبته تقريبا 2%.",
+                "25 - 50: ضعف عقلي متوسط أو شديد حسب الدرجة، ونسبته تقريبا 0.60%.",
+                "أقل من 25: ضعف شديد جدا، ونسبته تقريبا 0.2%.",
+              ],
+            },
+            {
+              h: "مقاييس النزعة المركزية",
+              items: [
+                "المتوسط الحسابي: نجمع الدرجات كلها ثم نقسم الناتج على عدد الدرجات؛ وهو أكثر المقاييس استخداما لأنه يعطي درجة واحدة تمثل المستوى العام للمجموعة.",
+                "المنوال: القيمة التي تتكرر أكثر من غيرها داخل المجموعة؛ وقد يكون للمجموعة منوال واحد أو أكثر، وقد لا يوجد منوال إذا لم تتكرر القيم.",
+                "الوسيط الفردي: إذا كان عدد الدرجات فرديا نرتب الدرجات ثم نحدد رتبة الوسيط بالقانون: رتبة الوسيط = (عدد الدرجات + 1) ÷ 2، وتكون قيمة الوسيط هي الدرجة الموجودة في هذه الرتبة.",
+                "الوسيط الزوجي: إذا كان عدد الدرجات زوجيا نرتب الدرجات ثم نأخذ القيمتين المتوسطتين ونجمعهما ونقسم على 2.",
+              ],
+            },
+            {
+              h: "الإنحراف المعياري",
+              items: [
+                "هو مقياس يوضح مدى تشتت الدرجات حول المتوسط؛ كلما كبر دل على أن الدرجات منتشرة ومتباعدة، وكلما صغر دل على أن الدرجات متقاربة.",
+                "طريقة الحل الطويلة: نحسب المتوسط، ثم نطرح المتوسط من كل درجة، ثم نربع كل انحراف، ثم نجمع مربعات الانحرافات ونقسمها على عدد الدرجات، وفي النهاية نأخذ الجذر التربيعي.",
+                "طريقة الحل المختصرة: نحسب مجموع الدرجات ومجموع مربعات الدرجات، ثم نطبق: الانحراف المعياري = جذر: متوسط مربعات الدرجات - مربع المتوسط.",
+              ],
+            },
+          ],
+        },
+        {
+          title: "الفصل الخامس: الإختبارات النفسية",
+          accent: "from-stone-600 to-slate-900",
+          sections: [
+            {
+              h: "تعريف",
+              items: [
+                "مجموعة منتظمه من المثيرات أعدت لتقيس بطريقة كمية أو كيفية بعض العمليات العقلية أو سمات معينة في الشخصية بمختلف جوانبها.",
+                "وسائل مقننة تثير لدى الفرد ردود فعل أو استجابات يمكن تسجيلها.",
+                "مقياس موضوعي مقنن لعينة من السلوك.",
+                "طريقة منظمه لمقارنة سلوك شخصين أو أكثر.",
+                "فؤاد أبو حطب: طريقة منظمة للمقارنة بين الأفراد أو داخل الفرد الواحد في السلوك أو عينة منه في ضوء معيار أو مستوى محك.",
+              ],
+            },
+            {
+              h: "الأهداف العامة للإختبار النفسي",
+              items: [
+                "التعرف على قدرات الفرد واستعداداته.",
+                "التوجيه التربوي.",
+                "التوجيه المهني.",
+                "التنبؤ والتشخيص.",
+                "الدافعية.",
+                "تحسين العملية التعليمية.",
+              ],
+            },
+            {
+              h: "خصائص الإختبار الجيد - صفات أساسية",
+              items: [
+                "الصدق | صفة نوعية وليس صفة مطلقة: أن يقيس الإختبار ما وضع لقياسه.",
+                "صدق ظاهري: هو المظهر العام للإختبار من حيث نوع المفردات.",
+                "صدق المحتوى وطرقه: جدول المواصفات، المقارنه بين الطلاب قبل التدريب وبعده، تحليل طرق العمل التي يستخدمها المفحوص اثناء حل الإختبار، تحديد الخصائص اللفظية والكمية لأسئلة الإختبار.",
+                "صدق مرتبط بمحكات وأنواعه من حيث الغرض: الصدق التنبؤي، والصدق التلازمي.",
+                "صدق التكوين الفرضي: هو مدى قياس الإختبار لتكوين فرضي | ومن طرق تحديده: تمايز العمر والتغيرات الإرتقائية، معاملات الإرتباط بالإختبارات الأخرى، التحليل العاملي.",
+              ],
+            },
+            {
+              h: "الثبات",
+              items: [
+                "يقصد به دقة الإختبار في القياس أو الملاحظة وعدم تناقضه مع نفسه.",
+                "طرق حسابه: إعادة الإختبار: تطبيق الاختبار مرتين على نفس المجموعة وحساب الارتباط.",
+                "طريقة الصور المتكافئة: إعداد صورتين متكافئتين من الاختبار ومقارنة الدرجات.",
+                "طريقة التجزئة النصفية: تقسيم بنود الاختبار إلى نصفين وحساب الارتباط بينهما.",
+                "طريقة كودر ريتشاردسون: تستخدم غالبا مع البنود الموضوعية ثنائية التصحيح.",
+                "طريقة ألفالكرونباك: تقيس الاتساق الداخلي بين بنود الاختبار.",
+              ],
+            },
+            {
+              h: "الشمول والموضوعية",
+              items: [
+                "الشمول: هو تناوله جميع الموضوعات المقرره ومراعاته المستويات المختلفة من الطلاب.",
+                "الموضوعية: عكس الذاتية | وتعني إخراج رأي المصحح من عملية التصحيح.",
+                "شروط تحقق الموضوعية: استقلال الإختبار عن الفاحص سواء في تعليماته أو في محتواه.",
+                "أن تكون للدرجة التي يحصل عليها الطالب قيمة رياضية تمكننا من مقارنة الفرد بغيره او بنفسه على فترات متباعدة.",
+              ],
+            },
+            {
+              h: "العوامل المؤثرة على صدق الإختبار",
+              items: [
+                "عوامل متعلقة بالطالب: اضطرابه في الإختبار، العادات السيئة في الإجابة كالتخمين والغش.",
+                "عوامل متعلقة بالإختبار نفسه: لغة الإختبار، غموض الأسئلة، صياغة الأسئلة، سهولة الأسئلة أو صعوبتها.",
+                "عوامل متعلقة بإدارة الإختبارات: عوامل بيئية كالحر أو البرد، عوامل متعلقة بالطباعه كعدم وضوح الكلام أو الأخطاء المطبعية، عوامل متعلقة بالتعليمات غير الواضحة.",
+              ],
+            },
+            {
+              h: "العوامل المؤثرة في ثبات الإختبار",
+              items: [
+                "طول الإختبار: كلما زاد عدد البنود الجيدة زادت فرصة ثبات الدرجة؛ لأن الحكم لا يعتمد على سؤال أو سؤالين فقط.",
+                "زمن الإختبار: الزمن القصير جدا قد يظلم الطالب، والزمن الطويل جدا قد يدخل عامل التعب؛ لذلك يجب أن يناسب طبيعة الأسئلة.",
+                "تباين المجموعة: إذا كانت المجموعة متقاربة جدا في المستوى تقل الفروق بين الدرجات، فيصعب إظهار الثبات بدقة.",
+                "صعوبة الإختبار: الاختبار السهل جدا أو الصعب جدا يقلل التمييز بين الطلاب، أما الصعوبة المتوسطة فتساعد على ثبات أفضل.",
+              ],
+            },
+            {
+              h: "صفات ثانوية",
+              items: [
+                "سهولة التطبيق: أن تكون إجراءات الاختبار واضحة ومناسبة للطلاب والوقت.",
+                "سهولة التصحيح: وجود مفتاح إجابة أو محكات تصحيح تقلل الجهد والاختلاف.",
+                "قلة التكاليف المادية: ألا يحتاج الاختبار إلى أدوات أو نفقات غير مناسبة.",
+                "التميز ومراعاة مستوى الطلبة: أن يفرق بين مستويات الطلاب دون ظلم أو تعجيز.",
+                "الوضوح: وضوح اللغة والتعليمات وشكل الورقة.",
+              ],
+            },
+            {
+              h: "خطوات يتطلبها بناء الإختبار الجيد",
+              items: [
+                "تحديد غرض الإختبار: نحدد هل الهدف تشخيص، تقويم نهائي، تدريب، أو مقارنة بين الطلاب.",
+                "تحديد مادة الإختبار والوحدات الدراسية: حتى لا تأتي الأسئلة خارج المحتوى المطلوب.",
+                "تحديد الأهداف المتوقعة من الطلبة: تصنف في مجالات معرفية ووجدانية ونفس حركية حتى نقيس أكثر من مستوى.",
+                "إعداد جدول المواصفات: نحدد الوزن النسبي للمحتوى والوزن النسبي للأهداف، ثم نوزع عدد الأسئلة بعدل.",
+                "اختيار أنماط البنود الإختبارية: مثل صواب وخطأ، اختيار من متعدد، أكمل، مقالي، مع تحديد عدد كل نوع.",
+                "إنتاج الإختبار بصورته النهائية: مراجعة اللغة والتعليمات والترتيب والتنسيق قبل التطبيق.",
+                "تحديد زمن الإختبار وتعليماته: الزمن يجب أن يناسب عدد الأسئلة وصعوبتها، والتعليمات تكون واضحة.",
+                "تطبيق الإختبار في أجواء إيجابية: مكان هادئ، تعليمات ثابتة، ومنع عوامل القلق أو التشويش.",
+              ],
+            },
+          ],
+        },
+        {
+          title: "الفصل السادس: الإختبارات التحصيلية",
+          accent: "from-amber-600 to-stone-800",
+          sections: [
+            {
+              h: "التعريف",
+              items: [
+                "ناتج ما تعلمه التلاميذ من إجراء عملية التعليم.",
+                "جابر عبد الحميد: ناتج اكتساب المعرفة التي يمكن قياسها باختبارات مقننة.",
+              ],
+            },
+            {
+              h: "الأنواع",
+              items: [
+                "موضوعية: اسئلة الصواب والخطأ، المزاوجة / صل العبارتين، أكمل.",
+                "مقالية: أسئلة تتطلب إجابة منظمة يشرح فيها الطالب أو يحلل أو يقارن.",
+              ],
+            },
+            {
+              h: "الأسس التي نضعها ف الإعتبار عند إعداد تعليمات الإختبار",
+              items: [
+                "أن تكون تلك التعليمات مرتبطة بنوع الأسئلة.",
+                "تعليمات خاصة بكل سؤال على حده.",
+                "تقدير كيفي لدرجات كل سؤال.",
+                "التعليمات توضح كيفية الإجابه عن الإختبار.",
+                "فاصل الورقة يتوقف على عمر المتعلم.",
+                "طبيعة الإختبار نفسه.",
+                "زمن الإختبار.",
+                "إعداد مفتاح الإجابة.",
+              ],
+            },
+            {
+              h: "التصحيح واستخراج المعايير",
+              items: [
+                "يصحح الإختبار وفق المفتاح الخاص به.",
+                "يحسب الصواب بدرجة ولا يحسب الخطأ أو المتروك.",
+                "تجمع الإجابة الصحيحة.",
+                "يحدد العمر الزمني للفرد على ضوء ما سبق ذكره.",
+                "البحث عن الدرجه الخام التي نالها الفرد في العمود المناسب لعمره الزمني ونحددها بوضع دائرة حولها.",
+              ],
+            },
+            {
+              h: "العوامل المؤثرة في التحصيل",
+              items: [
+                "المعلم: كفاءة المعلم وطريقة شرحه وتعامله مع الطلاب تؤثر مباشرة في الفهم والدافعية.",
+                "الأسرة: المتابعة والهدوء والدعم داخل البيت تساعد الطالب على الاستذكار المنتظم.",
+                "الطالب: قدراته واستعداده وصحته ودافعيته وعاداته الدراسية تحدد جزءا كبيرا من تحصيله.",
+                "الإدارة المدرسية ونظام الإمتحانات: التنظيم الجيد والعدالة في الامتحان ووضوح التعليمات تقلل القلق وترفع الأداء.",
+                "المناهج وطرق التدريس: المنهج المنظم والطريقة المناسبة تجعل المعلومة أسهل في الفهم والتطبيق.",
+                "المجتمع: قيم المجتمع ونظرته للتعليم والفرص المتاحة تؤثر في اهتمام الطالب بالتعلم.",
+                "المحتوى الدراسي: وضوح المحتوى وتدرجه وترابطه يساعد الطالب على بناء المعرفة بدون فجوات.",
+                "المستوى الإقتصادي - الإجتماعي: الإمكانات المادية والثقافية قد توفر مصادر تعلم أو تقللها.",
+                "العوامل النفسية: القلق والثقة بالنفس والانتباه والدافعية تؤثر في التركيز والاستدعاء وقت الامتحان.",
+              ],
+            },
+            {
+              h: "خطوات بناء الإختبار",
+              items: [
+                "تحديد الهدف من الإختبار: هل نريد قياس التحصيل بعد وحدة، أم تشخيص الضعف، أم ترتيب الطلاب؟",
+                "تحليل محتوى الفصول الثلاثة المراد عمل الإمتحان فيها: نقسم كل فصل إلى عناصر وأهداف حتى لا يطغى فصل على الآخر.",
+                "إعداد جدول المواصفات: نحدد عدد الأسئلة ونسبتها حسب أهمية الفصل ومستوى الهدف مثل تذكر، فهم، تطبيق.",
+              ],
+            },
+          ],
+        },
+      ];
+
+      const statLessons = [
+        {
+          title: "الوسط / المتوسط",
+          formula: "المتوسط = مجموع الدرجات ÷ عدد الدرجات",
+          values: [4, 6, 5, 8, 2],
+          marker: 5,
+          idea: "تخيل معاك خمس درجات وعايز رقم واحد يقول لك مستوى المجموعة. نجمع الدرجات ونقسمها على عددها. الرقم الناتج اسمه المتوسط.",
+          steps: [
+            "اجمع الأرقام كلها: 4 + 6 + 5 + 8 + 2 = 25.",
+            "عدّ الأرقام: عندنا 5 أرقام.",
+            "اقسم: 25 ÷ 5 = 5. إذن المتوسط = 5.",
+          ],
+          example:
+            "يعني لو كل الدرجات اتحولت لدرجة عادلة واحدة، هتبقى 5 لكل طالب تقريبًا.",
+        },
+        {
+          title: "الوسيط",
+          formula: "رتبة الوسيط = (عدد الدرجات + 1) ÷ 2",
+          values: [9, 12, 14, 17, 19, 20, 22],
+          marker: 17,
+          idea: "الوسيط هو الرقم الواقف في النص بعد ما نرتب الأرقام. كأنه الطفل اللي واقف في منتصف الطابور بالضبط.",
+          steps: [
+            "رتب الدرجات من الصغير للكبير.",
+            "لو العدد فردي، خذ الرقم الموجود في المنتصف.",
+            "في المثال: 9، 12، 14، 17، 19، 20، 22. الرقم الموجود في المنتصف هو 17.",
+          ],
+          example:
+            "لو عدد القيم زوجي، نأخذ الرقمين اللي في المنتصف ونجمعهم ونقسم على 2.",
+        },
+        {
+          title: "المنوال",
+          formula: "المنوال = القيمة الأكثر تكرارا",
+          values: [2, 7, 5, 4, 5, 3],
+          marker: 5,
+          idea: "المنوال هو الرقم اللي ظهر أكتر من غيره. كأنه صاحب أعلى صوت في المجموعة لأنه اتكرر أكثر.",
+          steps: [
+            "اكتب كل الأرقام.",
+            "عدّ كل رقم ظهر كام مرة.",
+            "الرقم الذي يظهر أكثر مرة هو المنوال.",
+          ],
+          example:
+            "في المثال: 2، 7، 5، 4، 5، 3. الرقم 5 ظهر مرتين، وباقي الأرقام مرة واحدة. إذن المنوال = 5.",
+        },
+        {
+          title: "المدى",
+          formula: "المدى = أكبر قيمة - أصغر قيمة",
+          values: [7, 2, 9, 12, 6, 8],
+          marker: 10,
+          idea: "المدى يقول لنا الأرقام بعيدة عن بعضها قد إيه. نأخذ أكبر رقم ونطرح منه أصغر رقم.",
+          steps: [
+            "ابحث عن أكبر رقم في المجموعة.",
+            "ابحث عن أصغر رقم في المجموعة.",
+            "اطرح: أكبر رقم - أصغر رقم.",
+          ],
+          example:
+            "في المثال: أكبر قيمة = 12، وأصغر قيمة = 2. إذن المدى = 12 - 2 = 10.",
+        },
+      ];
+
+      const flashcards = [
+        [
+          "ما تعريف الفروق الفردية؟",
+          "الانحرافات الفردية عن متوسط المجموعة في أي صفة مقاسة.",
+        ],
+        [
+          "ما الفرق بين القياس والتقويم؟",
+          "القياس وصف كمي، والتقويم تفسير وحكم وقرار للتحسين.",
+        ],
+        [
+          "اذكر مستويات القياس بالترتيب.",
+          "الإسمي، الرتبة، المسافة أو الفترة، النسبة.",
+        ],
+        ["قانون الوسط أو المتوسط؟", "المتوسط = مجموع الدرجات ÷ عدد الدرجات."],
+        ["قانون الوسيط للعدد الفردي؟", "رتبة الوسيط = (عدد الدرجات + 1) ÷ 2."],
+        [
+          "قانون المدى الكلي للفئات؟",
+          "المدى الكلي = أكبر قيمة - أصغر قيمة + 1.",
+        ],
+        ["ما المنوال؟", "هو القيمة التي تتكرر أكثر من غيرها."],
+        ["ما معنى الصدق؟", "أن يقيس الاختبار ما وضع لقياسه."],
+        ["ما معنى الثبات؟", "دقة الاختبار وعدم تناقضه مع نفسه عند القياس."],
+        [
+          "اذكر عاملين يؤثران في ثبات الاختبار.",
+          "طول الاختبار، زمن الاختبار، تباين المجموعة، صعوبة الاختبار.",
+        ],
+        [
+          "ما الاختبار التحصيلي؟",
+          "يقيس ناتج ما تعلمه التلاميذ من عملية التعليم.",
+        ],
+        ["ما الموضوعية؟", "إخراج رأي المصحح من عملية التصحيح وتقليل الذاتية."],
+      ];
+
+      const tabs = document.getElementById("chapterTabs");
+      const content = document.getElementById("chapterContent");
+      const searchInput = document.getElementById("searchInput");
+      let activeChapter = 0;
+
+      function highlight(text, query) {
+        if (!query) return text;
+        const safe = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        return text.replace(
+          new RegExp(safe, "gi"),
+          (match) => `<mark>${match}</mark>`,
+        );
+      }
+
+      function renderTabs() {
+        tabs.innerHTML = chapters
+          .map(
+            (chapter, index) => `
+          <button
+            class="chapter-tab shrink-0 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-black text-slate-700 shadow-sm"
+            role="tab"
+            aria-selected="${index === activeChapter}"
+            data-index="${index}"
+          >${chapter.title}</button>
+        `,
+          )
+          .join("");
+      }
+
+      function renderChapter() {
+        const query = searchInput.value.trim();
+        const chapter = chapters[activeChapter];
+        const blocks = chapter.sections
+          .map((section) => {
+            const items = section.items.filter(
+              (item) =>
+                !query ||
+                `${section.h} ${item}`
+                  .toLowerCase()
+                  .includes(query.toLowerCase()),
+            );
+            if (!items.length) return "";
+            return `
+              <article class="glass rounded-3xl p-5">
+                <h3 class="mb-4 flex items-center gap-3 text-xl font-black text-slate-950">
+                  <span class="h-3 w-3 rounded-full bg-gradient-to-br ${chapter.accent}"></span>
+                  ${highlight(section.h, query)}
+                </h3>
+                <ul class="grid gap-3 leading-8 text-slate-700">
+                  ${items.map((item) => `<li class="rounded-2xl bg-white/80 px-4 py-3">${highlight(item, query)}</li>`).join("")}
+                </ul>
+              </article>
+            `;
+          })
+          .join("");
+        content.innerHTML =
+          blocks ||
+          `<div class="rounded-3xl bg-white p-8 text-center font-bold text-slate-600">لا توجد نتيجة مطابقة داخل هذا الفصل.</div>`;
+      }
+
+      tabs.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-index]");
+        if (!button) return;
+        activeChapter = Number(button.dataset.index);
+        renderTabs();
+        renderChapter();
+      });
+      searchInput.addEventListener("input", renderChapter);
+
+      function renderStats() {
+        document.getElementById("statsGrid").innerHTML = statLessons
+          .map(
+            (lesson, index) => `
+          <article class="glass rounded-[2rem] p-5">
+            <h3 class="text-2xl font-black text-slate-950">${lesson.title}</h3>
+            <p class="mt-3 leading-8 text-slate-700">${lesson.idea}</p>
+            <span class="formula">${lesson.formula}</span>
+            <div class="stat-visual">
+              <canvas data-stat-canvas="${index}" aria-label="مثال بصري على ${lesson.title}"></canvas>
+            </div>
+            <div class="mt-5 grid gap-4">
+              <div class="rounded-2xl bg-white/85 p-4">
+                <p class="mb-3 font-black text-slate-950">خطوات الحل</p>
+                <ol class="list-decimal space-y-2 pr-5 leading-8 text-slate-700">
+                  ${lesson.steps.map((step) => `<li>${step}</li>`).join("")}
+                </ol>
+              </div>
+              <div class="rounded-2xl bg-[#1a1a1a] p-4 text-white">
+                <p class="mb-3 font-black text-amber-300">مثال محلول</p>
+                <p class="leading-8 text-slate-100">${lesson.example}</p>
+              </div>
+            </div>
+          </article>
+        `,
+          )
+          .join("");
+        renderStatCanvases();
+      }
+
+      function renderStatCanvases() {
+        document.querySelectorAll("[data-stat-canvas]").forEach((canvas) => {
+          const lesson = statLessons[Number(canvas.dataset.statCanvas)];
+          const rect = canvas.getBoundingClientRect();
+          const width = Math.max(320, Math.floor(rect.width || 640));
+          const height = 230;
+          const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+          canvas.width = Math.floor(width * dpr);
+          canvas.height = Math.floor(height * dpr);
+          canvas.style.height = `${height}px`;
+          const ctx = canvas.getContext("2d");
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          ctx.clearRect(0, 0, width, height);
+          ctx.fillStyle = "#fffaf0";
+          ctx.fillRect(0, 0, width, height);
+
+          const values = lesson.values;
+          const max = Math.max(...values);
+          const min = Math.min(...values);
+          const gap = width / (values.length + 1);
+          const base = height - 42;
+          const chartTop = lesson.title === "المدى" ? 88 : 64;
+
+          ctx.strokeStyle = "#d4af37";
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(24, base);
+          ctx.lineTo(width - 24, base);
+          ctx.stroke();
+
+          values.forEach((value, index) => {
+            const barHeight = ((value - Math.min(0, min)) / max) * 100 + 12;
+            const x = gap * (index + 1);
+            const y = base - barHeight;
+            ctx.fillStyle = value === lesson.marker ? "#1a1a1a" : "#d4af37";
+            roundRect(ctx, x - 16, y, 32, barHeight, 8);
+            ctx.fill();
+            ctx.fillStyle = "#1a1a1a";
+            ctx.font = "900 15px Cairo, Tahoma, sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText(String(value), x, base + 24);
+          });
+
+          ctx.fillStyle = "#1a1a1a";
+          roundRect(ctx, width - 205, 14, 181, 32, 12);
+          ctx.fill();
+          ctx.fillStyle = "#f6d66b";
+          ctx.font = "900 15px Cairo, Tahoma, sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText(`النقطة المهمة: ${lesson.marker}`, width - 114, 36);
+
+          if (lesson.title === "المدى") {
+            ctx.strokeStyle = "#1a1a1a";
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(gap, chartTop);
+            ctx.lineTo(gap * values.length, chartTop);
+            ctx.stroke();
+            ctx.fillStyle = "#1a1a1a";
+            ctx.font = "900 14px Cairo, Tahoma, sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText(
+              `من ${min} إلى ${max}`,
+              gap * ((values.length + 1) / 2),
+              chartTop - 10,
+            );
+          }
+        });
+      }
+
+      function roundRect(ctx, x, y, width, height, radius) {
+        ctx.beginPath();
+        ctx.moveTo(x + radius, y);
+        ctx.arcTo(x + width, y, x + width, y + height, radius);
+        ctx.arcTo(x + width, y + height, x, y + height, radius);
+        ctx.arcTo(x, y + height, x, y, radius);
+        ctx.arcTo(x, y, x + width, y, radius);
+        ctx.closePath();
+      }
+
+      function renderCards(cards = flashcards) {
+        document.getElementById("cardsGrid").innerHTML = cards
+          .map(
+            ([front, back], index) => `
+          <button class="flip-card text-right" type="button" aria-label="بطاقة حفظ ${index + 1}">
+            <span class="flip-inner relative block rounded-3xl">
+              <span class="flip-face absolute inset-0 rounded-3xl border border-white/10 bg-white p-6 text-slate-950 shadow-xl">
+                <span class="mb-6 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-black text-slate-600">السؤال</span>
+                <span class="block text-xl font-black leading-9">${front}</span>
+                <span class="absolute bottom-5 left-6 text-sm font-bold text-slate-500">اضغط للقلب</span>
+              </span>
+              <span class="flip-face flip-back absolute inset-0 rounded-3xl border border-amber-300/25 bg-amber-300 p-6 text-slate-950 shadow-xl">
+                <span class="mb-6 inline-flex rounded-full bg-slate-950 px-3 py-1 text-xs font-black text-white">الإجابة</span>
+                <span class="block text-lg font-black leading-9">${back}</span>
+              </span>
+            </span>
+          </button>
+        `,
+          )
+          .join("");
+      }
+
+      document
+        .getElementById("cardsGrid")
+        .addEventListener("click", (event) => {
+          const card = event.target.closest(".flip-card");
+          if (card) card.classList.toggle("is-flipped");
+        });
+
+      document.getElementById("shuffleCards").addEventListener("click", () => {
+        renderCards([...flashcards].sort(() => Math.random() - 0.5));
+      });
+
+      document.querySelectorAll(".mind-node").forEach((node) => {
+        node.addEventListener("click", () => updateMapNote(node));
+        node.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            updateMapNote(node);
+          }
+        });
+      });
+
+      function updateMapNote(node) {
+        document.getElementById("mapTitle").textContent = node.dataset.title;
+        document.getElementById("mapNote").textContent = node.dataset.note;
+      }
+
+      document.querySelectorAll(".map-filter").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll(".map-filter").forEach((b) => {
+            b.className =
+              "map-filter rounded-full bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm";
+          });
+          button.className =
+            "map-filter rounded-full bg-slate-950 px-4 py-2 text-sm font-bold text-white";
+          const target = button.dataset.target;
+          document.querySelectorAll(".mind-node").forEach((node) => {
+            const show =
+              target === "all" ||
+              node.dataset.group === target ||
+              node.dataset.group === "all";
+            node.style.opacity = show ? "1" : ".22";
+          });
+        });
+      });
+
+      function initPsychMobileNav() {
+        const button = document.getElementById("psychMenuToggle");
+        const nav = document.getElementById("psychMobileNav");
+        if (!button || !nav) return;
+
+        function setMenuState(isOpen) {
+          nav.classList.toggle("is-open", isOpen);
+          if (isOpen) {
+            nav.removeAttribute("hidden");
+          } else {
+            nav.setAttribute("hidden", "hidden");
+          }
+          button.setAttribute("aria-expanded", String(isOpen));
+          button.classList.toggle("is-open", isOpen);
+        }
+
+        button.addEventListener("click", () => {
+          setMenuState(!nav.classList.contains("is-open"));
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            setMenuState(false);
+          });
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.matchMedia("(min-width: 768px)").matches) {
+            setMenuState(false);
+          }
+        });
+      }
+
+      function initHeroCanvas() {
+        const canvas = document.getElementById("heroCanvas");
+        const ctx = canvas.getContext("2d");
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        let width = 0;
+        let height = 0;
+        let raf = 0;
+        const points = Array.from({ length: 48 }, () => ({
+          x: Math.random(),
+          y: Math.random(),
+          vx: (Math.random() - 0.5) * 0.0007,
+          vy: (Math.random() - 0.5) * 0.0007,
+        }));
+
+        function resize() {
+          const dpr = Math.min(window.devicePixelRatio || 1, 1.6);
+          width = canvas.offsetWidth;
+          height = canvas.offsetHeight;
+          canvas.width = Math.floor(width * dpr);
+          canvas.height = Math.floor(height * dpr);
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, width, height);
+          points.forEach((p, i) => {
+            if (!reduceMotion) {
+              p.x += p.vx;
+              p.y += p.vy;
+              if (p.x < 0 || p.x > 1) p.vx *= -1;
+              if (p.y < 0 || p.y > 1) p.vy *= -1;
+            }
+            const x = p.x * width;
+            const y = p.y * height;
+            ctx.beginPath();
+            ctx.arc(x, y, 2.2, 0, Math.PI * 2);
+            ctx.fillStyle =
+              i % 3 === 0 ? "#d4af37" : i % 3 === 1 ? "#2dd4bf" : "#fb7185";
+            ctx.fill();
+            points.slice(i + 1).forEach((q) => {
+              const qx = q.x * width;
+              const qy = q.y * height;
+              const dist = Math.hypot(x - qx, y - qy);
+              if (dist < 150) {
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(qx, qy);
+                ctx.strokeStyle = `rgba(255,255,255,${(1 - dist / 150) * 0.24})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+              }
+            });
+          });
+          raf = requestAnimationFrame(draw);
+        }
+
+        resize();
+        draw();
+        window.addEventListener("resize", resize, { passive: true });
+      }
+
+      initPsychMobileNav();
+      renderTabs();
+      renderChapter();
+      renderStats();
+      renderCards();
+      initHeroCanvas();
+      window.addEventListener("resize", renderStatCanvases, { passive: true });
+      if (window.lucide) window.lucide.createIcons();
+    </script>
+  </body>
+</html>
